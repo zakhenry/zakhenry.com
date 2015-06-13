@@ -25,7 +25,7 @@ var World = function World(callback) {
 
     this.baseUrl = 'http://local.app.spira.io';
     if (process.env.TRAVIS){
-        this.baseUrl = 'http://127.0.0.1:80';
+        this.baseUrl = 'http://127.0.0.1:8001';
     }
 
     this.waitFor = function(cssLocator, timeout) {

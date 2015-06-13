@@ -11,7 +11,7 @@ before_script:
   - travis_retry npm install --no-spin
   - gulp bower:install
   - gulp build
-  - http-server ./app/build/ -p 80 2>&1 >/dev/null & #start webserver
+  - http-server ./app/build/ -p 8001 2>&1 >/dev/null & #start webserver
   - sleep 5 #give server some time to boot
 
 script:
