@@ -1,0 +1,4 @@
+bower_components/*
+build/
+release/
+!bower_components/.gitkeep
