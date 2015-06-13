@@ -9,7 +9,7 @@ env:
 before_script:
   - travis_retry npm install --no-spin --quiet -g gulp http-server
   - travis_retry npm install --no-spin
-  - gulp bower:install
+  - travis_retry gulp bower:install
   - gulp build
   - http-server ./app/build/ -p 8001 2>&1 >/dev/null & #start webserver
   - sleep 5 #give server some time to boot
