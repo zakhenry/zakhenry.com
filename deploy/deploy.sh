@@ -7,7 +7,6 @@ cd app/build
 git init
 git remote add origin "git@github.com:xiphiaz/xiphiaz.github.io.git"
 git add --all
-git commit -am "TRAVIS_COMMIT: $TRAVIS_COMMIT"
 
 git commit -aF- <<EOF
 Automated Travis CI Deployment: https://travis-ci.org/xiphiaz/zakhenry.com/builds/$TRAVIS_BUILD_ID
