@@ -7,6 +7,7 @@ env:
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_283c29934c17_key -iv $encrypted_283c29934c17_iv -in deploy/id_rsa.enc -out deploy/id_rsa -d
+  - chmod 600 deploy/id_rsa
   - eval "$(ssh-agent)"
   - ssh-add deploy/id_rsa
   - git config --global user.name "$GIT_NAME"
