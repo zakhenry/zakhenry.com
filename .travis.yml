@@ -14,4 +14,4 @@ script:
  - ./node_modules/.bin/cucumber.js
 
 after_script:
- - ./deploy/deploy.sh
+ - if [[ ( "$TRAVIS_BRANCH" == "master" ) && ( "$TRAVIS_PULL_REQUEST" == "false" ) ]]; then ./deploy/deploy.sh; fi
