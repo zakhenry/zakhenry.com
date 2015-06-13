@@ -1,11 +1,8 @@
 #!/bin/sh
 
 ls -alh
-ssh-add deploy/id_rsa
 
 cd app/build
-git config --global user.name "$GIT_NAME"
-git config --global  user.email "$GIT_EMAIL"
 
 git init
 git remote add origin "git@github.com:xiphiaz/xiphiaz.github.io.git"
