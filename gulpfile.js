@@ -43,6 +43,12 @@ var paths = {
         get assets(){
             return this.base + '/assets/images/**/*'
         },
+        get copy(){
+            return [
+                this.base + '/.nojekyll',
+                this.base + '/CNAME'
+            ]
+        },
         get tests(){
             return this.base + '/**/*.spec.js'
         }
@@ -118,6 +124,11 @@ gulp.task('styles', 'compiles stylesheets', [], function(){
 gulp.task('assets', 'copies asset files', [], function(){
     return gulp.src(paths.src.assets)
         .pipe(gulp.dest(paths.dest.assets));
+});
+
+gulp.task('copy', 'copies misc required files', [], function(){
+    return gulp.src(paths.src.copy)
+        .pipe(gulp.dest(paths.dest.base));
 });
 
 gulp.task('bower:build', 'compiles frontend vendor files', [], function(cb) {
@@ -229,7 +240,7 @@ gulp.task('default', 'default task', ['build']);
 gulp.task('build', 'runs build sequence for frontend', function (cb){
     plugins.runSequence('clean',
         //'bower:install',
-        ['scripts', 'templates', 'styles', 'assets', 'bower:build'],
+        ['scripts', 'templates', 'styles', 'copy', 'assets', 'bower:build'],
         'index',
         cb);
 });

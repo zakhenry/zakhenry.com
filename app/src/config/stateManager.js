@@ -3,7 +3,7 @@ angular.module('stateManager', [
     'siteModules'
 ])
     .config(function($stateProvider, $locationProvider, $urlRouterProvider, $compileProvider, stateHelperServiceProvider) {
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode(false); //false for gh-pages as .htaccess cannot be configured
 
         $urlRouterProvider.otherwise(function ($injector, $location) {
             var $state = $injector.get('$state');
