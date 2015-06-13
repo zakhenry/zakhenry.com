@@ -4,11 +4,12 @@ env:
     secure: asldWXqSigZ3ZWR7lxi0R/n1Jhm9QPXH/Gb2C6/y+CgmP1M0nDhJfq5Ynu8JwvwwZkYcN0CfgNGVXUDlslSW8LB4nLnZrhHg0osDXwTqj5vtUkABE9ECzv/VLAUanYDj75/yHv3kamUbVN2+QYMHG5YFPziNCzFtxsTlR9ypmn6GeKASGl+urNr9qpJxEkpWhM1B4/vRQaErBmvr/3jwHdNwfBicKW0I7In1/Dr1WFrTPZLbVkRP8OLAeZSZaqIZqwEOf/MunaR6S9hFMLdh1h+Z5HtMNg1acBcZiHUqsDKePQ01VB8Gnwie7UCshP05cMIVqGF91GhcBxBSIdMVSHUKVjZRGqcNqP6tHqa13q1CiOLj/nkOSlvAu9xr/eZqTjg+PXv1IoXcsQpRxr53xrUFP6Eetjb7W0JfxYyYGhDD6odQf0l8lJ9md9BDQ1IHY2wcUMw8fd6br8dtYfxSA1wAkcFmdWPRN9bC9nFbS0p4DbYbloUS0yb2eQ4BNW79/c+N3i5yVRij00muyp3jCjhfQoqqMv7X8a4soSHpUJy7aERT7GS+VCkehc1rsxUJiMZYHIEHlUGH6PVlFT/aPS98IxSMgcdmuDkrl2uMlMtiTEa79MhlQF4OM1jp3w+o3K88yzbZGVJZ7CUAI2hm5cpfeuOb9SfYrHXqcjFE3GI=
 
 before_script:
-  - travis_retry npm install --quiet -g gulp http-server
-  - travis_retry npm install
+  - travis_retry npm install --no-spin --quiet -g gulp http-server
+  - travis_retry npm install --no-spin
   - gulp bower:install
   - gulp build
   - http-server ./app/build/ -p 80 2>&1 >/dev/null & #start webserver
+  - sleep 5 #give server some time to boot
 
 script:
  - ./node_modules/.bin/cucumber.js
