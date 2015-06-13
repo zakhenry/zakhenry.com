@@ -1,7 +1,6 @@
 #!/bin/sh
 
-ls -alh
-
+set -e # abort the script if any command fails
 cd app/build
 
 git init
