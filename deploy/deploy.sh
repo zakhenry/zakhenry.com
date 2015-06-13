@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ls -alh
-cd build
+cd app/build
 git config --global user.name "$GIT_NAME"
 git config --global  user.email "$GIT_EMAIL"
 git init
