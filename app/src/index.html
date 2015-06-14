@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="app" ng-controller="AppCtrl" ng-strict-di>
     <head>
-        <title>spira - AngularJS Seed App</title>
+        <title>zakhenry.com</title>
         <base href="/" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,8 +23,10 @@
         <script type="text/javascript" src="/<%= file %>"></script>
         <% }); %>
 
+        <!-- remote stylesheets -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     </head>
-    <body>
-        <div class="page-container" ui-view="app"></div>
+    <body ui-view="app" layout="row">
     </body>
 </html>
