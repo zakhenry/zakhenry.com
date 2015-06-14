@@ -7,5 +7,5 @@ Feature: Home page
   Scenario: Visiting home page
     Given I am an anonymous user
     When I go to the home page
-    Then I should see "spira - AngularJS Seed App" as the page title
-    And I should see "Success!" as the main heading
+    Then I should see "zakhenry.com" as the page title
+    And I should see "I'm Zak Henry" as the main heading

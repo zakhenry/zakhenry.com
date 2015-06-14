@@ -5,7 +5,13 @@ angular.module('app', [
     'stateManager'
 ])
     .constant('API_URL', '/api')
-    .config(function(){
+    .config(function($mdIconProvider, $mdThemingProvider){
+        $mdIconProvider.fontSet('fa', 'fontawesome');
+
+        $mdThemingProvider.theme('default')
+            .primaryPalette('green')
+            .accentPalette('grey')
+        ;
 
     })
 
@@ -14,10 +20,13 @@ angular.module('app', [
         $rootScope.$on("$stateChangeError", _.bind(console.error, console));
     })
 
-    .controller('AppCtrl', function($scope) {
+    .controller('AppCtrl', function($scope, $mdSidenav) {
 
 
         $scope.test = 'hello world';
+        $scope.toggleLeftNav = function(){
+            $mdSidenav('left').toggle();
+        }
 
     })
 
