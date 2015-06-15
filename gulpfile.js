@@ -22,6 +22,7 @@ var gulpCore = require('gulp'),
         }
     }),
     gulp = plugins.help(gulpCore),
+    path = require('path'),
     _ = require('lodash'),
     browserSync = require('browser-sync').create()
 ;
@@ -51,6 +52,9 @@ var paths = {
         },
         get tests(){
             return this.base + '/**/*.spec.js'
+        },
+        get content(){
+            return './content/**/*.rho'
         }
     },
     dest: {
@@ -69,6 +73,9 @@ var paths = {
         },
         get assets(){
             return this.base + '/assets'
+        },
+        get content(){
+            return this.base + '/content'
         },
         get coverage(){
             return 'reports/**/lcov.info'
@@ -104,6 +111,37 @@ gulp.task('templates', 'builds template files', [], function(){
         .pipe(plugins.concat('templates.js'))
         .pipe(gulp.dest(paths.dest.scripts))
     ;
+});
+
+gulp.task('parse-content', 'parses .rho files in the /content dir into html and json summary file', [], function(){
+
+    return gulp.src(paths.src.content)
+        .pipe(plugins.frontMatter({
+            property: 'frontMatter', // property added to file object
+            remove: true // should we remove front-matter header?
+        }))
+        .pipe(plugins.rho())
+        .pipe(gulp.dest(paths.dest.content))
+        .pipe(plugins.tap(function(file, t) {
+            console.log('end tap', file.frontMatter, file.path);
+        }))
+        .pipe(plugins.change(function(content) {
+
+            var fileContent = _.merge(this.file.frontMatter, {
+                path : this.fname
+            });
+
+            return JSON.stringify(fileContent);
+        }))
+        .pipe(plugins.rename(function (path) {
+            path.extname = ".json"
+        }))
+        .pipe(plugins.jsoncombine("meta.json", function(data){
+            return new Buffer(JSON.stringify(data, null, 4));
+        }))
+        .pipe(gulp.dest(paths.dest.content))
+    ;
+
 });
 
 gulp.task('styles', 'compiles stylesheets', [], function(){
