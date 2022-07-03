@@ -1,5 +1,5 @@
 :root {
-    --primary: #161f66;
+    --primary: #b65e14;
     --subdued: grey;
     --default: black;
     --background: white;
@@ -13,7 +13,6 @@
         --background: #1b1c23;
     }
 }
-
 
 * {
     box-sizing: border-box;
@@ -33,10 +32,26 @@ ul, ol {
 }
 
 h1 {
-    color: var(--primary);
     font-size: 2rem;
+    pointer-events: auto;
+    cursor:default;
 }
 
+h1 span[lang]{
+    color: var(--primary);
+}
+
+details#main:not([open]) h1:hover span[lang=en]{
+    display: none;
+}
+
+h1 span[lang=mi] {
+    display: none;
+}
+
+details#main:not([open]) h1:hover span[lang=mi] {
+    display: inline;
+}
 
 details#main {
     pointer-events: none;
