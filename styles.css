@@ -1,0 +1,201 @@
+:root {
+    --primary: #161f66;
+    --subdued: grey;
+    --default: black;
+    --background: white;
+    --image: url(#image-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #5ac4eb;
+        --default: #e0e0e0;
+        --background: #1b1c23;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+    color: var(--default);
+}
+
+html, body {
+    height: 100%;
+    background: var(--background);
+}
+
+ul, ol {
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+
+details#main {
+    pointer-events: none;
+    height: 100%;
+}
+
+details#main > summary {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+#summary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0;
+}
+
+#summary-container .links {
+    margin-top: 1em;
+    pointer-events: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    justify-items: center;
+}
+
+#summary-container .links *:hover {
+    color: var(--primary);
+}
+
+#avatar .hex {
+    fill: var(--image);
+}
+
+@media (min-width: 1400px) {
+    details#main[open] #summary-container {
+        position: sticky;
+        top: 0;
+    }
+}
+
+
+#summary-flex-container {
+    margin: auto;
+    max-width: 1500px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#summary-flex-container .col-padding {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+#summary-flex-container .row-padding {
+    flex-grow: 1;
+}
+
+details#main[open] .shrink {
+    transition: flex-grow 1s ease-out;
+    flex-grow: 0;
+}
+
+section#resume {
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: auto;
+    opacity: 0;
+    padding: 1em;
+}
+
+details#main[open] section#resume {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+}
+
+section#resume > section {
+    border-top: 1px solid var(--subdued);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+}
+
+@media (max-width: 400px) {
+    section#resume > section {
+        display: block;
+    }
+}
+
+p {
+    text-align: justify;
+}
+
+details#main > summary::marker,
+details#main > summary::-webkit-details-marker {
+    display: none;
+}
+
+details#main > summary {
+    list-style: none;
+}
+
+#resume-link {
+    pointer-events: auto;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+section#skills ul {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+}
+
+@media (max-width: 700px) {
+    section#skills ul {
+        display: block;
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media (max-width: 500px) {
+    section#skills ul {
+        display: block;
+    }
+    section#skills li {
+        margin-bottom: 1rem;
+    }
+}
+
+section#skills li p {
+    text-align: left;
+}
+
+section#experience summary {
+    position: relative;
+}
+
+section#experience .tenure {
+    font-size: 0.8em;
+    color: var(--subdued);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
