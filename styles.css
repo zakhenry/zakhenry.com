@@ -123,6 +123,7 @@ details#main > summary {
 #avatar {
     height: 300px;
     pointer-events: auto;
+    margin: 1em 0;
 }
 
 #avatar .hex {
@@ -162,6 +163,10 @@ details#main[open] .shrink {
 
 @media (min-width: 1300px) {
 
+    details#main[open] .shrink-large {
+        transition: flex-grow 1s ease-out;
+        flex-grow: 0;
+    }
 
     details#main[open] #summary-container {
         position: sticky;
@@ -174,6 +179,11 @@ details#main[open] .shrink {
 }
 
 @media (max-width: 1300px) {
+
+    details#main[open] .shrink-small {
+        transition: flex-grow 1s ease-out;
+        flex-grow: 0;
+    }
 
     details#main[open] #summary-container h1, details#main[open] #summary-container .links {
         visibility: hidden;

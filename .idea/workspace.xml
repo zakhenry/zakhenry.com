@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f52310a6-11ae-44d8-932e-151e674a0b2e" name="Changes" comment="Carbon fibre pattern">
+    <list default="true" id="f52310a6-11ae-44d8-932e-151e674a0b2e" name="Changes" comment="add print button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
@@ -96,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656905119448</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add print button">
+      <created>1656918247714</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656918247714</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +125,7 @@
     <MESSAGE value="Add Maori greeting translation on hover of main section, only when resume is not open" />
     <MESSAGE value="Clean up mobile layout" />
     <MESSAGE value="Carbon fibre pattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="Carbon fibre pattern" />
+    <MESSAGE value="add print button" />
+    <option name="LAST_COMMIT_MESSAGE" value="add print button" />
   </component>
 </project>
