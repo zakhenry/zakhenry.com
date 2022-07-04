@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f52310a6-11ae-44d8-932e-151e674a0b2e" name="Changes" comment="add print button">
+    <list default="true" id="f52310a6-11ae-44d8-932e-151e674a0b2e" name="Changes" comment="bidirectional animation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656918247714</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="shift avatar to left side">
+      <created>1656919430965</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1656919430965</updated>
+    </task>
+    <task id="LOCAL-00007" summary="bidirectional animation">
+      <created>1656919554516</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656919554516</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +139,8 @@
     <MESSAGE value="Clean up mobile layout" />
     <MESSAGE value="Carbon fibre pattern" />
     <MESSAGE value="add print button" />
-    <option name="LAST_COMMIT_MESSAGE" value="add print button" />
+    <MESSAGE value="shift avatar to left side" />
+    <MESSAGE value="bidirectional animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="bidirectional animation" />
   </component>
 </project>

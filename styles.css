@@ -124,6 +124,7 @@ details#main > summary {
     height: 300px;
     pointer-events: auto;
     margin: 1em 0;
+    transition: height 1s;
 }
 
 #avatar .hex {
@@ -146,14 +147,15 @@ details#main > summary {
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
+    transition: flex-grow 1s ease-out;
 }
 
 #summary-flex-container .row-padding {
     flex-grow: 1;
+    transition: flex-grow 1s ease-out;
 }
 
 details#main[open] .shrink {
-    transition: flex-grow 1s ease-out;
     flex-grow: 0;
 }
 
@@ -164,7 +166,6 @@ details#main[open] .shrink {
 @media (min-width: 1300px) {
 
     details#main[open] .shrink-large {
-        transition: flex-grow 1s ease-out;
         flex-grow: 0;
     }
 
@@ -181,7 +182,6 @@ details#main[open] .shrink {
 @media (max-width: 1300px) {
 
     details#main[open] .shrink-small {
-        transition: flex-grow 1s ease-out;
         flex-grow: 0;
     }
 
@@ -192,7 +192,6 @@ details#main[open] .shrink {
     details#main[open] #avatar {
         margin-top: 0.5rem;
         height: 100px;
-        transition: height 1s;
     }
 
     #summary-flex-container {
