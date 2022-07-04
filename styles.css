@@ -4,6 +4,7 @@
     --default: black;
     --background: white;
     --image: url(#image-bg);
+    --background-stroke: #eee;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,6 +13,7 @@
         --default: #e0e0e0;
         --background: #1b1c23;
         --subdued: #bbb;
+        --background-stroke: #000;
     }
 }
 
@@ -24,8 +26,9 @@
 
 html, body {
     height: 100%;
-    background: var(--background);
+    /*background: var(--background);*/
 }
+
 
 ul, ol {
     padding: 0;
@@ -299,4 +302,30 @@ section#experience h4 em:before {
 }
 section#experience h4 em:after {
     content: ")";
+}
+
+svg#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+polygon {
+    fill: none;
+    stroke-width: 2;
+    stroke: var(--background-stroke);
+}
+
+rect.weave {
+    stroke: var(--background-stroke);
+}
+
+rect.weave.a {
+    fill: #111
+}
+rect.weave.b {
+    fill: #222
 }
