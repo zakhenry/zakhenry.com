@@ -4,29 +4,44 @@
     --default: black;
     --background: white;
     --image: url(#image-bg);
-    --background-stroke: #eee;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary: #5ac4eb;
-        --default: #e0e0e0;
-        --background: #1b1c23;
-        --subdued: #bbb;
-        --background-stroke: #000;
+@media not print {
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --primary: #5ac4eb;
+            --default: #e0e0e0;
+            --background: black;
+            --subdued: #bbb;
+        }
     }
 }
+
+
+@media print {
+
+    :root {
+        --primary: #666;
+    }
+
+    #experience summary {
+        list-style: none;
+    }
+
+}
+
 
 * {
     box-sizing: border-box;
     margin: 0;
     font-family: sans-serif;
     color: var(--default);
+    z-index: 1;
 }
 
 html, body {
     height: 100%;
-    /*background: var(--background);*/
+    background: var(--background);
 }
 
 
@@ -81,12 +96,35 @@ details#main > summary {
     flex-grow: 0;
 }
 
-#summary-container .links {
+.links {
     width: 350px;
-    margin-top: 1em;
     pointer-events: auto;
     display: flex;
     justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.links.contact-footer {
+    margin-top: 3em;
+}
+
+@media print {
+    .links.contact-footer {
+        flex-direction: column;
+        position: absolute;
+        top: 1em;
+    }
+    .links.contact-footer a:after {
+        content: ": " attr(href);
+    }
+    .links.contact-footer a {
+        content: none;
+        text-decoration: none;
+    }
+    .links.contact-footer:after {
+        content: "Phone: 027 275 0752\A Email: zak.henry@gmail.com";
+        white-space: pre;
+    }
 }
 
 #summary-container .links *:hover {
@@ -101,14 +139,6 @@ details#main > summary {
 #avatar .hex {
     fill: var(--image);
 }
-
-@media (min-width: 1400px) {
-    details#main[open] #summary-container {
-        position: sticky;
-        top: 0;
-    }
-}
-
 
 #summary-flex-container {
     margin: auto;
@@ -141,6 +171,19 @@ details#main[open] .shrink {
     display: none;
 }
 
+@media (min-width: 1300px) {
+
+
+    details#main[open] #summary-container {
+        position: sticky;
+        top: 0;
+    }
+
+    .contact-footer {
+        display: none;
+    }
+}
+
 @media (max-width: 1300px) {
 
     details#main[open] #summary-container h1, details#main[open] #summary-container .links {
@@ -148,6 +191,7 @@ details#main[open] .shrink {
     }
 
     details#main[open] #avatar {
+        margin-top: 0.5rem;
         height: 100px;
         transition: height 1s;
     }
@@ -179,15 +223,7 @@ section#resume {
     flex-direction: column;
     max-width: 700px;
     margin: auto;
-    opacity: 0;
     padding: 1em;
-}
-
-details#main[open] section#resume {
-    opacity: 1;
-    transition-property: opacity;
-    transition-duration: 1s;
-    transition-delay: 0.5s;
 }
 
 section#resume > section {
@@ -217,17 +253,17 @@ details#main > summary {
     list-style: none;
 }
 
-#resume-link {
+.resume-link {
     pointer-events: auto;
     cursor: pointer;
     text-decoration: underline;
 }
 
-details#main[open] #resume-link span {
+details#main[open] .resume-link span {
     display: none;
 }
 
-details#main[open] #resume-link:before {
+details#main[open] .resume-link:before {
     content: "←back";
 }
 
@@ -304,28 +340,31 @@ section#experience h4 em:after {
     content: ")";
 }
 
-svg#background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+@media not print, (prefers-color-scheme: dark) {
+
+    svg#background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    rect.weave {
+        stroke: hsl(0deg 0% 3%);
+    }
+
+    rect.weave.a {
+        fill: hsl(0deg 0% 7%);
+    }
+    rect.weave.b {
+        fill: hsl(0deg 0% 10%);
+    }
 }
 
-polygon {
-    fill: none;
-    stroke-width: 2;
-    stroke: var(--background-stroke);
-}
-
-rect.weave {
-    stroke: var(--background-stroke);
-}
-
-rect.weave.a {
-    fill: #111
-}
-rect.weave.b {
-    fill: #222
+@media print, (prefers-color-scheme: light) {
+    svg#background {
+        display: none;
+    }
 }
