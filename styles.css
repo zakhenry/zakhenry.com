@@ -11,6 +11,7 @@
         --primary: #5ac4eb;
         --default: #e0e0e0;
         --background: #1b1c23;
+        --subdued: #bbb;
     }
 }
 
@@ -29,6 +30,10 @@ html, body {
 ul, ol {
     padding: 0;
     list-style: none;
+}
+
+h2,h3,h4 {
+    color: var(--primary)
 }
 
 h1 {
@@ -74,16 +79,20 @@ details#main > summary {
 }
 
 #summary-container .links {
+    width: 350px;
     margin-top: 1em;
     pointer-events: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1em;
-    justify-items: center;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #summary-container .links *:hover {
     color: var(--primary);
+}
+
+#avatar {
+    height: 300px;
+    pointer-events: auto;
 }
 
 #avatar .hex {
@@ -123,6 +132,42 @@ details#main > summary {
 details#main[open] .shrink {
     transition: flex-grow 1s ease-out;
     flex-grow: 0;
+}
+
+#resume-title-name {
+    display: none;
+}
+
+@media (max-width: 1300px) {
+
+    details#main[open] #summary-container h1, details#main[open] #summary-container .links {
+        visibility: hidden;
+    }
+
+    details#main[open] #avatar {
+        height: 100px;
+        transition: height 1s;
+    }
+
+    #summary-flex-container {
+        max-width: 700px;
+    }
+
+    details#main[open] #summary-container {
+        align-items: flex-end;
+    }
+
+    #resume h2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #resume-title-name {
+        display: inline;
+        font-size: 1.5em;
+        color: var(--primary)
+    }
+
 }
 
 section#resume {
@@ -175,6 +220,14 @@ details#main > summary {
     text-decoration: underline;
 }
 
+details#main[open] #resume-link span {
+    display: none;
+}
+
+details#main[open] #resume-link:before {
+    content: "←back";
+}
+
 section#skills ul {
     display: grid;
     grid-gap: 1rem;
@@ -185,11 +238,14 @@ section#skills ul {
 @media (max-width: 700px) {
     section#skills ul {
         display: block;
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: 1fr 1fr;
     }
-}
 
-@media (max-width: 500px) {
+    section#resume > section {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
     section#skills ul {
         display: block;
     }
@@ -202,15 +258,45 @@ section#skills li p {
     text-align: left;
 }
 
-section#experience summary {
-    position: relative;
+section#technical ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5em;
 }
 
-section#experience .tenure {
+section#experience summary {
+    position: relative;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+section#experience summary:hover {
+    text-decoration: underline;
+}
+
+section#experience summary span {
+    text-align: right;
     font-size: 0.8em;
-    color: var(--subdued);
-    display: block;
     position: absolute;
     right: 0;
-    top: 0;
+}
+
+section#experience summary > * {
+    display: inline;
+}
+
+section#experience details p {
+    margin: 1em 1em;
+}
+
+section#experience h4 em {
+    color: var(--subdued);
+    font-size: 0.8em;
+    line-height: 1em;
+}
+section#experience h4 em:before {
+    content: "(";
+}
+section#experience h4 em:after {
+    content: ")";
 }

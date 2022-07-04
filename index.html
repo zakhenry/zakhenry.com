@@ -10,7 +10,7 @@
 <body>
 
 
-<details id="main">
+<details id="main" open>
 
     <summary>
 
@@ -23,7 +23,7 @@
 
                 <div id="summary-container" class="row-padding shrink">
 
-                    <svg id="avatar" xmlns="http://www.w3.org/2000/svg" height="300" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg id="avatar" xmlns="http://www.w3.org/2000/svg" viewBox="0, 0, 300, 300" xmlns:xlink="http://www.w3.org/1999/xlink">
 
                         <defs>
                             <pattern id="image-bg" x="0" y="0" height="300" width="300" patternUnits="userSpaceOnUse">
@@ -41,7 +41,7 @@
                     </h1>
 
                     <div class="links">
-                        <span id="resume-link">About</span>
+                        <span id="resume-link"><span>About</span></span>
                         <a href="https://github.com/zakhenry">Github</a>
                         <a href="https://twitter.com/zak">Twitter</a>
                         <a href="https://www.linkedin.com/in/zakhenry/">LinkedIn</a>
@@ -59,7 +59,7 @@
 
     <section id="resume">
 
-        <h2>Resume</h2>
+        <h2><span id="resume-title-name">Zak Henry</span><span>Resume</span></h2>
 
         <section>
             <h3>Profile</h3>
@@ -68,15 +68,14 @@
                     integrating with gRPC & REST APIs. Significant experience working with backend technologies
                     including Kotlin, Python, Node.js, SQL, Docker & AWS.
                 </p>
-                <p>Currently working as a fully remote technical lead for <a href="https://cloudnc.com">CloudNC</a>
-                in Wānaka, New Zealand
+                <p>Currently working fully remote from Wānaka, New Zealand as a technical lead for <a href="https://cloudnc.com">CloudNC</a>.
                 </p>
             </div>
         </section>
 
         <section id="skills">
             <h3>Skills</h3>
-            <ul class="body">
+            <ul>
                 <li>
                     <h4>Angular</h4>
                     <p>Worked professionally with
@@ -130,9 +129,9 @@
             </ul>
         </section>
 
-        <section>
+        <section id="technical">
             <h3>Technical</h3>
-            <ul class="body">
+            <ul>
                 <li>Javascript/Typescript</li>
                 <li>Angular (2+)</li>
                 <li>Node.js</li>
@@ -153,15 +152,15 @@
         <section id="experience">
             <h3>Experience</h3>
 
-            <ol class="body">
+            <ol>
 
 
                 <li>
                     <details>
                         <summary>
-                            <h4>CloudNC <em>UK/ NZ Remote</em></h4>
+                            <h4>CloudNC <em>UK / NZ Remote</em></h4>
                             <h5>Principal Software Engineer</h5>
-                            <span class="tenure">2018-Present</span>
+                            <span>2018 - now</span>
                         </summary>
 
                         <p>Working in and now leading the UI/API team of 4, developing Angular 2+ user interface for
@@ -177,13 +176,12 @@
                         <summary>
                             <h4>Yieldify <em>UK</em></h4>
                             <h5>Tech Lead/Senior Full Stack Engineer</h5>
-                            <span class="tenure">2016-2018</span>
+                            <span>2016 - 2018</span>
                         </summary>
 
-                        <p>Working in and now leading the UI/API team of 4, developing Angular 2+ user interface for
-                            marketing
-                            platform. Advisor on cross-component API interfaces, in addition to cloud infrastructure
-                            planning.</p>
+                        <p>Leading the UI/API, developing Angular 2+ user interface for
+                            marketing platform. Advisor on cross-component API interfaces, in addition to cloud
+                            infrastructure planning.</p>
                     </details>
                 </li>
 
@@ -192,7 +190,7 @@
                         <summary>
                             <h4>Zeroth <em>UK</em></h4>
                             <h5>Founder</h5>
-                            <span class="tenure">2016</span>
+                            <span>2016</span>
                         </summary>
 
                         <p>Developing the Zeroth framework, a Typescript full stack NodeJS framework built on the
@@ -206,7 +204,7 @@
                         <summary>
                             <h4>IQuitSugar.com <em>AU</em></h4>
                             <h5>Lead Senior Full Stack Developer</h5>
-                            <span class="tenure">2015-2016</span>
+                            <span>2015 - 2016</span>
                         </summary>
 
                         <p>Project lead, working under the CTO to develop the infrastructure and development design of a
@@ -224,7 +222,7 @@
                         <summary>
                             <h4>4mation Technologies <em>AU</em></h4>
                             <h5>Senior Front End Developer</h5>
-                            <span class="tenure">2013-2015</span>
+                            <span>2013 - 2015</span>
                         </summary>
 
                         <p>Role primarily involved developing web applications in AngularJS, with heavy involvement in
@@ -240,7 +238,7 @@
                         <summary>
                             <h4>KODE Biotech Limited <em>NZ</em></h4>
                             <h5>Application Developer</h5>
-                            <span class="tenure">2007-2013</span>
+                            <span>2007 - 2013</span>
                         </summary>
 
                         <ul>
@@ -261,7 +259,7 @@
         <section>
             <h3>Education</h3>
 
-            <div class="body">
+            <div>
                 <h4>Auckland University of Technology <em>NZ</em></h4>
                 <p>Bachelor of Creative Technologies</p>
             </div>
