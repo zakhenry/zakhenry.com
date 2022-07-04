@@ -50,21 +50,21 @@ ul, ol {
     list-style: none;
 }
 
-h2,h3,h4 {
+h2, h3, h4 {
     color: var(--primary)
 }
 
 h1 {
     font-size: 2rem;
     pointer-events: auto;
-    cursor:default;
+    cursor: default;
 }
 
-h1 span[lang]{
+h1 span[lang] {
     color: var(--primary);
 }
 
-details#main:not([open]) h1:hover span[lang=en]{
+details#main:not([open]) h1:hover span[lang=en] {
     display: none;
 }
 
@@ -104,27 +104,16 @@ details#main > summary {
     margin: 0 auto;
 }
 
-.links.contact-footer {
+.links.footer {
     margin-top: 3em;
 }
 
 @media print {
-    .links.contact-footer {
-        flex-direction: column;
-        position: absolute;
-        top: 1em;
+
+    .links.footer {
+        display: none;
     }
-    .links.contact-footer a:after {
-        content: ": " attr(href);
-    }
-    .links.contact-footer a {
-        content: none;
-        text-decoration: none;
-    }
-    .links.contact-footer:after {
-        content: "Phone: 027 275 0752\A Email: zak.henry@gmail.com";
-        white-space: pre;
-    }
+
 }
 
 #summary-container .links *:hover {
@@ -179,7 +168,7 @@ details#main[open] .shrink {
         top: 0;
     }
 
-    .contact-footer {
+    .footer {
         display: none;
     }
 }
@@ -288,6 +277,7 @@ section#skills ul {
     section#skills ul {
         display: block;
     }
+
     section#skills li {
         margin-bottom: 1rem;
     }
@@ -333,9 +323,11 @@ section#experience h4 em {
     font-size: 0.8em;
     line-height: 1em;
 }
+
 section#experience h4 em:before {
     content: "(";
 }
+
 section#experience h4 em:after {
     content: ")";
 }
@@ -358,13 +350,56 @@ section#experience h4 em:after {
     rect.weave.a {
         fill: hsl(0deg 0% 7%);
     }
+
     rect.weave.b {
         fill: hsl(0deg 0% 10%);
     }
 }
 
+.contact-info {
+    display: none;
+
+}
+
 @media print, (prefers-color-scheme: light) {
     svg#background {
         display: none;
+    }
+
+}
+
+button#print {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    font-size: 1.5em;
+}
+
+@media print {
+
+    button {
+        display: none;
+    }
+
+    .contact-info {
+        margin-top: 1em;
+        display: grid;
+        column-gap: 1em;
+        grid-template-columns: min-content min-content;
+    }
+
+    #email:after {
+        content: "zak.henry@gmail.com";
+    }
+
+    #phone:after {
+        content: "027 275 0752";
+    }
+
+    details#main[open] #avatar {
+        height: 180px;
     }
 }
