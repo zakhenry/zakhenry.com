@@ -149,16 +149,15 @@ details#main > summary {
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
-    transition: flex-grow 1s ease-out;
 }
 
 #summary-flex-container .row-padding {
     flex-grow: 1;
-    transition: flex-grow 1s ease-out;
 }
 
 details#main[open] .shrink {
     flex-grow: 0;
+    transition: flex-grow 1s ease-out;
 }
 
 #resume-title-name {
@@ -169,6 +168,7 @@ details#main[open] .shrink {
 
     details#main[open] .shrink-large {
         flex-grow: 0;
+        transition: flex-grow 1s ease-out;
     }
 
     details#main[open] #summary-container {
@@ -185,6 +185,7 @@ details#main[open] .shrink {
 
     details#main[open] .shrink-small {
         flex-grow: 0;
+        transition: flex-grow 1s ease-out;
     }
 
     details#main[open] #summary-container h1, details#main[open] #summary-container .links {
