@@ -318,6 +318,13 @@ section#experience summary {
     cursor: pointer;
 }
 
+@media (max-width: 512px) {
+    section#experience summary h5 {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
 section#experience summary:hover {
     text-decoration: underline;
 }
