@@ -17,7 +17,6 @@
     }
 }
 
-
 @media print {
 
     :root {
@@ -29,7 +28,6 @@
     }
 
 }
-
 
 * {
     box-sizing: border-box;
@@ -101,7 +99,11 @@ details#main > summary {
     pointer-events: auto;
     display: flex;
     justify-content: space-evenly;
-    margin: 0 auto;
+    margin: 1em auto;
+}
+
+.links * {
+    padding: 5px;
 }
 
 .links.footer {
@@ -254,7 +256,14 @@ details#main > summary {
 .resume-link {
     pointer-events: auto;
     cursor: pointer;
-    text-decoration: underline;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px var(--default);
+    transition: box-shadow 0.6s linear;
+}
+
+.resume-link:hover {
+    box-shadow: 0 0 0 3px var(--primary);
+    color: var(--primary);
 }
 
 details#main[open] .resume-link span {
@@ -323,7 +332,12 @@ section#experience summary > * {
     display: inline;
 }
 
-section#experience details p {
+section#experience ul.summary-list {
+    list-style: circle;
+    margin-left: 2em;
+}
+
+section#experience details p, section#experience details ul {
     margin: 1em 1em;
 }
 
@@ -341,6 +355,17 @@ section#experience h4 em:after {
     content: ")";
 }
 
+section#experience details > ul:last-child {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));*/
+    grid-template-columns: repeat(auto-fill, 15%);
+    grid-gap: 0.5em 1em;
+}
+
+section#experience details > ul:last-child > li {
+    color: var(--subdued);
+}
+
 @media not print, (prefers-color-scheme: dark) {
 
     svg#background {
@@ -353,11 +378,11 @@ section#experience h4 em:after {
     }
 
     rect.weave {
-        stroke: hsl(0deg 0% 3%);
+        stroke: hsl(0deg 0% 5%);
     }
 
     rect.weave.a {
-        fill: hsl(0deg 0% 7%);
+        fill: hsl(0deg 0% 8%);
     }
 
     rect.weave.b {
@@ -381,9 +406,6 @@ button#print {
     border: none;
     background: none;
     cursor: pointer;
-    position: fixed;
-    top: 1em;
-    right: 1em;
     font-size: 1.5em;
 }
 
