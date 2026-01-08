@@ -1,0 +1,81 @@
+@media not print, (prefers-color-scheme: dark) {
+
+  svg#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  rect.weave {
+    stroke: hsl(0deg 0% 5%);
+  }
+
+  rect.weave.a {
+    fill: hsl(0deg 0% 8%);
+  }
+
+  rect.weave.b {
+    fill: hsl(0deg 0% 10%);
+  }
+}
+
+@media print, (prefers-color-scheme: light) {
+  svg#background {
+    display: none;
+  }
+
+}
+
+
+:root {
+  --primary: #b65e14;
+  --subdued: grey;
+  --default: black;
+  --background: white;
+  --image: url(#image-bg);
+}
+
+@media not print {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #5ac4eb;
+      --default: #e0e0e0;
+      --background: black;
+      --subdued: #bbb;
+    }
+  }
+}
+
+@media print {
+
+  :root {
+    --primary: #666;
+  }
+
+  #experience summary {
+    list-style: none;
+  }
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: sans-serif;
+  color: var(--default);
+  z-index: 1;
+}
+
+html, body {
+  height: 100%;
+  background: var(--background);
+}
+
+zh-root {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

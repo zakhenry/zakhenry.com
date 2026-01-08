@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Zak Henry</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+  <svg id="background">
+    <defs>
+      <pattern id="hexagons"
+               width="40"
+               height="40"
+               patternUnits="userSpaceOnUse"
+               patternTransform="scale(1.5) translate(2) rotate(45)">
+        <rect class="weave a" width="10" height="20"></rect>
+        <rect class="weave a" width="10" height="20" x="10" y="-10"></rect>
+        <rect class="weave a" width="10" height="20" x="10" y="30"></rect>
+        <rect class="weave a" width="10" height="20" x="20" y="20"></rect>
+        <rect class="weave a" width="10" height="20" x="30" y="10"></rect>
+        <rect class="weave b" width="20" height="10" x="-10" y="30"></rect>
+        <rect class="weave b" width="20" height="10" x="0" y="20"></rect>
+        <rect class="weave b" width="20" height="10" x="10" y="10"></rect>
+        <rect class="weave b" width="20" height="10" x="20" y="0"></rect>
+        <rect class="weave b" width="20" height="10" x="30" y="30"></rect>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#hexagons)"/>
+  </svg>
+
+  <zh-root></zh-root>
+</body>
+</html>
