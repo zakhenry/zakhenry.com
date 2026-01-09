@@ -1,0 +1,22 @@
+:host {
+  margin: auto;
+  max-width: 900px;
+  display: block;
+}
+
+:host ::ng-deep {
+
+  p {
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+
+}
+
+time {
+  color: var(--subdued);
+}
+
+section {
+  margin-top: 2rem;
+}

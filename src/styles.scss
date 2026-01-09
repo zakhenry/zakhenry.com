@@ -1,41 +1,10 @@
-@media not print, (prefers-color-scheme: dark) {
-
-  svg#background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-
-  rect.weave {
-    stroke: hsl(0deg 0% 5%);
-  }
-
-  rect.weave.a {
-    fill: hsl(0deg 0% 8%);
-  }
-
-  rect.weave.b {
-    fill: hsl(0deg 0% 10%);
-  }
-}
-
-@media print, (prefers-color-scheme: light) {
-  svg#background {
-    display: none;
-  }
-
-}
-
-
 :root {
   --primary: #b65e14;
   --subdued: grey;
   --default: black;
   --background: white;
   --image: url(#image-bg);
+  --border-color: var(--subdued);
 }
 
 @media not print {
@@ -43,7 +12,7 @@
     :root {
       --primary: #5ac4eb;
       --default: #e0e0e0;
-      --background: black;
+      --background: lch(8 0 0);
       --subdued: #bbb;
     }
   }
@@ -55,27 +24,32 @@
     --primary: #666;
   }
 
-  #experience summary {
-    list-style: none;
-  }
-
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: sans-serif;
   color: var(--default);
-  z-index: 1;
+}
+
+@font-face {
+  font-family: "EBGaramond";
+  src: url("/assets/fonts/EBGaramond-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto";
+  src: url("/assets/fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
 }
 
 html, body {
   height: 100%;
   background: var(--background);
+  font-family: "Noto", sans-serif, system-ui, -apple-system;
 }
 
-zh-root {
-  position: absolute;
-  left: 0;
-  top: 0;
-}

@@ -1,0 +1,8 @@
+<nav>
+  <ol>
+
+  @for(route of routes; track route.path) {
+    <li><a [routerLink]="route.path">{{route.title}}</a></li>
+  }
+  </ol>
+</nav>

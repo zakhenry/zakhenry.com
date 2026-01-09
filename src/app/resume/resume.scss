@@ -1,0 +1,250 @@
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+h2, h3, h4 {
+  color: var(--primary)
+}
+
+#resume-title-name {
+  display: none;
+}
+
+@media (min-width: 1300px) {
+
+  details#main[open] .shrink-large {
+    flex-grow: 0;
+    transition: flex-grow 1s ease-out;
+  }
+
+  details#main[open] #summary-container {
+    position: sticky;
+    top: 0;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+
+
+  details#main[open] #summary-container h1, details#main[open] #summary-container .links {
+    visibility: hidden;
+  }
+
+  details#main[open] #avatar {
+    margin-top: 0.5rem;
+    height: 100px;
+  }
+
+  #summary-flex-container {
+    max-width: 700px;
+  }
+
+  details#main[open] #summary-container {
+    align-items: flex-end;
+  }
+
+  #resume h2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+section#resume {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: auto;
+  padding: 1em;
+}
+
+section#resume > section {
+  border-top: 1px solid var(--subdued);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+}
+
+@media (max-width: 400px) {
+  section#resume > section {
+    display: block;
+  }
+}
+
+p {
+  text-align: justify;
+}
+.resume-link {
+  pointer-events: auto;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px var(--default);
+  transition: box-shadow 0.6s linear;
+}
+
+.resume-link:hover {
+  box-shadow: 0 0 0 3px var(--primary);
+  color: var(--primary);
+}
+
+details#main[open] .resume-link span {
+  display: none;
+}
+
+details#main[open] .resume-link:before {
+  content: "←back";
+}
+
+section#skills ul {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  section#skills ul {
+    display: block;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  section#resume > section {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+
+  section#skills ul {
+    display: block;
+  }
+
+  section#skills li {
+    margin-bottom: 1rem;
+  }
+}
+
+section#skills li p {
+  text-align: left;
+}
+
+section#technical ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5em;
+}
+
+section#experience summary {
+  position: relative;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+@media (max-width: 512px) {
+  section#experience summary h5 {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+section#experience summary:hover {
+  text-decoration: underline;
+}
+
+section#experience summary span {
+  text-align: right;
+  font-size: 0.8em;
+  position: absolute;
+  right: 0;
+}
+
+section#experience summary > * {
+  display: inline;
+}
+
+section#experience ul.summary-list {
+  list-style: circle;
+  margin-left: 2em;
+}
+
+section#experience details p, section#experience details ul {
+  margin: 1em 1em;
+}
+
+section#experience h4 em {
+  color: var(--subdued);
+  font-size: 0.8em;
+  line-height: 1em;
+}
+
+section#experience h4 em:before {
+  content: "(";
+}
+
+section#experience h4 em:after {
+  content: ")";
+}
+
+section#experience details > ul:last-child {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 80px);
+  grid-gap: 0.5em 1em;
+}
+
+section#experience details > ul:last-child > li {
+  color: var(--subdued);
+}
+
+.contact-info {
+  display: none;
+
+}
+
+
+button#print {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+@media print {
+
+  button {
+    display: none;
+  }
+
+  .contact-info {
+    margin-top: 1em;
+    display: grid;
+    column-gap: 1em;
+    grid-template-columns: min-content min-content;
+  }
+
+  #email:after {
+    content: "zak.henry@gmail.com";
+  }
+
+  #phone:after {
+    content: "027 275 0752";
+  }
+
+  details#main[open] #avatar {
+    height: 180px;
+  }
+
+  #resume-title-name {
+    display: inline;
+    font-size: 1.5em;
+    color: var(--primary)
+  }
+
+  ::ng-deep header {
+    display: none !important;
+  }
+}

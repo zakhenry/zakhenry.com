@@ -1,4 +1,8 @@
-<a routerLink="../">Home</a>
-<p>blog-index works!</p>
+<nav>
+  <ol>
 
-<a routerLink="observable-webworkers">Observable webworkers</a>
+    @for(route of routes; track route.path) {
+      <li><a [routerLink]="route.path">{{route.title}}</a></li>
+    }
+  </ol>
+</nav>

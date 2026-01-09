@@ -5,6 +5,7 @@ export const routes: Routes = [
     path: '', loadComponent: () => import("./article-index/article-index")
   },
   {
-    path: 'observable-webworkers', loadComponent: () => import("./observable-webworkers/observable-webworkers")
+    path: 'observable-webworkers-with-angular-intro', loadComponent: () => import("./observable-webworkers/observable-webworkers"),
+    title: 'Observable Web Workers with Angular - Introduction'
   },
 ];
