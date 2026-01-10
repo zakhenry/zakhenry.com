@@ -21,7 +21,7 @@ jobs:
       - name: Build
         run: zola build
 
-      - name: Deploy to S3 bucket and invalidate cloutfront
+      - name: Deploy to S3 bucket and invalidate cloudfront
         uses: reggionick/s3-deploy@v4
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

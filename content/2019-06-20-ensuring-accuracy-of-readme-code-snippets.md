@@ -8,7 +8,7 @@ tags = ["readme", "open source", "markdown", "code blocks"]
 
 ## The problem
 
-It is the first interaction a developer will have with your library. They hear about the library through various means, but they will at some point all end up at the README. It is critical that their first impression is good, and nothing can turn a developer off a library than the example code blocks in the README not actually working.
+It is the first interaction a developer will have with your library. They hear about the library through various means, but they will at some point all end up at the README. It is critical that their first impression is good, and nothing can turn a developer off a library faster than the example code blocks in the README not actually working.
 
 Markdown itself doesn't do much to help us - it is a simple markup language that knows nothing about the libraries that we're building, and it certainly can't compile the code within the code snippets that we create.
 

@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c87c27fa-b21f-47c3-b2b9-795b19735d4d" name="Changes" comment="update theme to my fork">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/publish.yml" afterDir="false" />
+    <list default="true" id="c87c27fa-b21f-47c3-b2b9-795b19735d4d" name="Changes" comment="ensure submodules are checked out">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/publish.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +154,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768029865464</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add actions deployment">
+      <option name="closed" value="true" />
+      <created>1768030676565</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1768030676565</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ensure submodules are checked out">
+      <option name="closed" value="true" />
+      <created>1768030887612</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1768030887612</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +181,9 @@
     <MESSAGE value="progress on article layout" />
     <MESSAGE value="switch to Zola" />
     <MESSAGE value="update theme to my fork" />
-    <option name="LAST_COMMIT_MESSAGE" value="update theme to my fork" />
+    <MESSAGE value="add actions deployment" />
+    <MESSAGE value="ensure submodules are checked out" />
+    <option name="LAST_COMMIT_MESSAGE" value="ensure submodules are checked out" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
