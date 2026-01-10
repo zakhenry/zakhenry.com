@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c87c27fa-b21f-47c3-b2b9-795b19735d4d" name="Changes" comment="switch to Zola">
-      <change afterPath="$PROJECT_DIR$/content/2026-01-10-serverless-grpc.md" afterDir="false" />
+    <list default="true" id="c87c27fa-b21f-47c3-b2b9-795b19735d4d" name="Changes" comment="update theme to my fork">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/publish.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/kita" beforeDir="false" afterPath="$PROJECT_DIR$/themes/kita" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +38,7 @@
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
     &quot;bazel.project.detector.is.bazel.project&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/zola-ssg&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/zak/repos/open-source/zakhenry.com/content&quot;,
@@ -113,7 +112,7 @@
       <workItem from="1767771813989" duration="1679000" />
       <workItem from="1767773501040" duration="323000" />
       <workItem from="1767773835362" duration="29000" />
-      <workItem from="1767773883116" duration="39180000" />
+      <workItem from="1767773883116" duration="40284000" />
     </task>
     <task id="LOCAL-00001" summary="Init new angular app, adapt existing site to match">
       <option name="closed" value="true" />
@@ -147,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768004366729</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update theme to my fork">
+      <option name="closed" value="true" />
+      <created>1768029865464</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1768029865464</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +164,8 @@
     <MESSAGE value="Init new angular app, adapt existing site to match" />
     <MESSAGE value="progress on article layout" />
     <MESSAGE value="switch to Zola" />
-    <option name="LAST_COMMIT_MESSAGE" value="switch to Zola" />
+    <MESSAGE value="update theme to my fork" />
+    <option name="LAST_COMMIT_MESSAGE" value="update theme to my fork" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
