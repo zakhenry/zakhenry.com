@@ -1,0 +1,77 @@
+# The URL the site will be built for
+base_url = "https://zakhenry.com"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+theme = "kita"
+
+taxonomies = [{ name = "tags", rss = true, paginate_by = 5 }]
+
+title = "Zak Henry"
+description = "software engineer, tinkerer"
+author = "Zak Henry"
+
+
+# When set to "true", a feed is automatically generated.
+generate_feeds = true
+
+# The filenames to use for the feeds. Used as the template filenames, too.
+# Defaults to ["atom.xml"], which has a built-in template that renders an Atom 1.0 feed.
+# There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
+feed_filenames = ["atom.xml", "rss.xml"]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+# Put all your custom variables here
+# Enable floating table of contents on the right side of the post page.
+#side_toc = true
+
+[extra.profile]
+name = "Hello"
+bio = "I am a software engineer with a passion for all things programming. From the web to embedded hardware, I'm into it all."
+# The URL of avatar.
+avatar_url = "avatar.jpeg"
+# Invert color in dark mode.
+avatar_invert = false
+
+# The social icons below the profile on the home page.
+# The `name` should be the file name of static/icons/*.svg or the icon name of https://simpleicons.org/
+[[extra.profile.social]]
+name = "github"
+url = "https://github.com/zakhenry"
+#
+#[[extra.profile.social]]
+#name = "twitter"
+#url = "https://twitter.com/zak"
+
+[[extra.profile.social]]
+name = "rss"
+url = "$BASE_URL/rss.xml"
+
+[extra.footer]
+since = 2019
+license = "CC BY-SA 4.0"
+license_url = "https://creativecommons.org/licenses/by-sa/4.0/deed"
+
+[[extra.menu]]
+name = "projects"
+url = "$BASE_URL/projects"
+
+[[extra.menu]]
+name = "archive"
+url = "$BASE_URL/archive"
+
+[[extra.menu]]
+name = "tags"
+url = "$BASE_URL/tags"
+
+[[extra.menu]]
+name = "about"
+url = "$BASE_URL/about"

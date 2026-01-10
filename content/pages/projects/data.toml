@@ -1,0 +1,69 @@
+[[project]]
+name = "lambda-grpc-web"
+desc = "A rust crate that makes gRPC usable on AWS Lambda, with grpc-web message framing as lambda-compatible http/1.1 transport."
+tags = ["aws", "lambda", "rust", "tonic", "grpc"]
+links = [
+    { name = "source", url = "https://github.com/zakhenry/lambda-grpc-web" },
+]
+
+[[project]]
+name = "envoy-rust-config"
+desc = "Demo of configuring Envoy with Rust instead of yaml"
+tags = ["envoy", "rust"]
+links = [
+    { name = "source", url = "https://github.com/zakhenry/envoy-rust-config" },
+]
+
+[[project]]
+name = "observable-webworker"
+desc = "Utility to make data streaming to/from webworkers ergonomic with RxJS"
+tags = ["observable", "webworker", "angular"]
+links = [
+    { name = "npm", url = "https://www.npmjs.com/package/observable-webworker" },
+    { name = "source", url = "https://github.com/cloudnc/observable-webworker" },
+    { name = "demo", url = "https://cloudnc.github.io/observable-webworker" },
+]
+
+[[project]]
+name = "mdbook-protobuf"
+desc = "A preprocessor for mdbook, allowing developers to generate reference documentation from .proto protobuf definition files."
+tags = ["mdbook", "protobuf", "rust"]
+links = [
+    { name = "source", url = "https://github.com/zakhenry/mdbook-protobuf" },
+    { name = "crate", url = "https://crates.io/crates/mdbook-protobuf" },
+]
+
+[[project]]
+name = "cutter loader"
+desc = "SVG loading spinner emulating a rotating tool cutting a polygon"
+tags = ["svg", "loader"]
+links = [
+    { name = "source", url = "https://github.com/zakhenry/cutter-loader" },
+    { name = "reddit", url = "https://www.reddit.com/r/LoadingIcons/comments/1m6xsb9/circle_cutting_a_pentagon" },
+]
+
+[[project]]
+name = "embedme"
+desc = "Utility for embedding code snippets into markdown documents"
+tags = ["markdown", "code block"]
+links = [
+    { name = "source", url = "https://github.com/zakhenry/embedme" },
+    { name = "npm", url = "https://www.npmjs.com/package/embedme" },
+]
+
+
+[[project]]
+name = "embedme"
+desc = "WASM module for converting a mesh (with wireframe) to svg line drawing"
+tags = ["wasm", "rust", "svg", "geometry"]
+links = [
+    { name = "source", url = "https://github.com/zakhenry/mesh-to-svg" },
+]
+
+[[project]]
+name = "carcassonne"
+desc = "Game rules enging for the popular board game"
+tags = ["rust", "board game"]
+links = [
+    { name = "source", url = "https://github.com/zakhenry/carcassonne" },
+]
