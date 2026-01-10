@@ -8,13 +8,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v3
-      - uses: taiki-e/install-action@v2
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install zola
+        uses: taiki-e/install-action@v2
         with:
           tool: zola@0.17.2
+
       - name: Build
         run: zola build
-      - uses: reggionick/s3-deploy@v4
+
+      - name: Deploy to S3 bucket and invalidate cloutfront
+        uses: reggionick/s3-deploy@v4
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
