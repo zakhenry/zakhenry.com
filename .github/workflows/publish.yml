@@ -16,7 +16,7 @@ jobs:
       - name: Install zola
         uses: taiki-e/install-action@v2
         with:
-          tool: zola@0.17.2
+          tool: zola@0.21.0
 
       - name: Build
         run: zola build
