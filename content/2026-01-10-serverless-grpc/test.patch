@@ -1,0 +1,13 @@
+diff --git a/demo/tests/tcp-server.rs b/demo/tests/lambda-server.rs
+index 0de50fc..8cea88f 100644
+--- a/demo/tests/tcp-server.rs
++++ b/demo/tests/lambda-server.rs
+@@ -33,7 +33,7 @@ fn make_greeter_client() -> Result<
+         .layer(GrpcWebClientLayer::new())
+         .service(client);
+ 
+-    let origin = Uri::from_static("http://127.0.0.1:9000");
++    let origin = Uri::from_static("http://127.0.0.1:9000/lambda-url/lambda-server");
+ 
+     let client = GreeterClient::with_origin(svc, origin);
+ 

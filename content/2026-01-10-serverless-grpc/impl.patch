@@ -1,0 +1,33 @@
+diff --git a/demo/src/bin/tcp-server.rs b/demo/src/bin/lambda-server.rs
+index 4fc3d58..80cbf77 100644
+--- a/demo/src/bin/tcp-server.rs
++++ b/demo/src/bin/lambda-server.rs
+@@ -1,8 +1,8 @@
+ use hello_world::greeter_server::{Greeter, GreeterServer};
+ use hello_world::{HelloReply, HelloRequest};
+-use tonic::transport::Server;
++use lambda_grpc_web::LambdaServer;
++use lambda_grpc_web::lambda_runtime::Error;
+ use tonic::{Request, Response, Status};
+-use tonic_web::GrpcWebLayer;
+ 
+ mod hello_world {
+     tonic::include_proto!("helloworld");
+@@ -28,14 +28,12 @@ impl Greeter for MyGreeter {
+ }
+ 
+ #[tokio::main]
+-async fn main() -> Result<(), Box<dyn std::error::Error>> {
++async fn main() -> Result<(), Error> {
+     let greeter = MyGreeter::default();
+ 
+-    Server::builder()
+-        .accept_http1(true)
+-        .layer(GrpcWebLayer::new())
++    LambdaServer::builder()
+         .add_service(GreeterServer::new(greeter))
+-        .serve("127.0.0.1:9000".parse().unwrap())
++        .serve()
+         .await?;
+ 
+     Ok(())
