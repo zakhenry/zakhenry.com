@@ -35,7 +35,7 @@ highlight_code = true
 
 [extra.profile]
 name = "Hello"
-bio = "I am a software engineer with a passion for all things programming. From the web to embedded hardware, I'm into it all."
+bio = "I'm a software engineer focused on building reliable systems and clean abstractions. I work across the stack, from embedded code to web interfaces"
 # The URL of avatar.
 avatar_url = "avatar.jpeg"
 # Invert color in dark mode.
