@@ -401,9 +401,3 @@ that explore more capability like streaming and middleware.
 
 As a final note, I did this not because I think it should be the next big thing, I did it because it's an interesting 
 challenge, and in a relatively unexplored cloud compute niche that I believe has interesting potential. 
-
-<!--
-{% admonition(type="quote", title="Continue the conversation") %}
-[Reddit /r/rust]()
-{% end %}
--->
