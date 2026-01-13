@@ -1,5 +1,5 @@
 +++
-title= "Serverless gRPC"
+title= "Running gRPC services on AWS Lambda with Rust"
 description= ""
 date = "2026-01-10"
 [taxonomies]
