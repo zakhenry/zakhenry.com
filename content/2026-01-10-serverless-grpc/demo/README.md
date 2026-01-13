@@ -4,15 +4,14 @@
 
 Run
 ```shell
-cargo lambda watch --bin tcp-server
+cargo run --bin tcp-server
 ```
-
 
 ### Lambda Server
 
 Run lambda
 ```shell
-cargo run --bin lambda-server
+cargo lambda watch --bin lambda-server
 ```
 
 Build for AWS
