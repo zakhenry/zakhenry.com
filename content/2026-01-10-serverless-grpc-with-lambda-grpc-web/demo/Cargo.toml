@@ -1,0 +1,27 @@
+[package]
+name = "hello-lambda-grpc-web"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tonic = "0.14"
+prost = "0.14"
+tonic-prost = "0.14"
+tonic-web = "0.14.2"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+lambda-grpc-web = "0.1.1"
+
+
+[dev-dependencies]
+hyper-util = {  version = "0.1.19" }
+hyper-rustls = { version = "0.27.7", features = ["rustls-platform-verifier", "http2"] }
+rustls = "0.23.35"
+
+[build-dependencies]
+tonic-prost-build = "0.14"
+
+[[bin]]
+name = "tcp-server"
+
+[[bin]]
+name = "lambda-server"
